@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19063F51-25E3-4164-9368-EC3ABE53159C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SH.EntityAttributeValue.Manager.Domain", "src\SH.EntityAttributeValue.Manager.Domain\SH.EntityAttributeValue.Manager.Domain.csproj", "{3448FF59-86D2-427F-BE67-7C985EF08231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SH.EntityAttributeValue.Manager.Application", "src\SH.EntityAttributeValue.Manager.Application\SH.EntityAttributeValue.Manager.Application.csproj", "{E8835D9C-9280-4172-9CA2-28FCF2E8C267}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SH.EntityAttributeValue.Manager.Persistence", "src\SH.EntityAttributeValue.Manager.Persistence\SH.EntityAttributeValue.Manager.Persistence.csproj", "{1F029D71-7D4A-4BF6-A4A1-E9FF4D6EA795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SH.EntityAttributeValue.Manager.Infrastructure", "src\SH.EntityAttributeValue.Manager.Infrastructure\SH.EntityAttributeValue.Manager.Infrastructure.csproj", "{EC1DD387-0B5C-4AAF-87E0-F551316A613E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SH.EntityAttributeValue.Manager.WebApi", "src\SH.EntityAttributeValue.Manager.WebApi\SH.EntityAttributeValue.Manager.WebApi.csproj", "{FA97FE7D-B0F0-4EDA-B858-99EDC0034078}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3448FF59-86D2-427F-BE67-7C985EF08231} = {19063F51-25E3-4164-9368-EC3ABE53159C}
+		{E8835D9C-9280-4172-9CA2-28FCF2E8C267} = {19063F51-25E3-4164-9368-EC3ABE53159C}
+		{1F029D71-7D4A-4BF6-A4A1-E9FF4D6EA795} = {19063F51-25E3-4164-9368-EC3ABE53159C}
+		{EC1DD387-0B5C-4AAF-87E0-F551316A613E} = {19063F51-25E3-4164-9368-EC3ABE53159C}
+		{FA97FE7D-B0F0-4EDA-B858-99EDC0034078} = {19063F51-25E3-4164-9368-EC3ABE53159C}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3448FF59-86D2-427F-BE67-7C985EF08231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3448FF59-86D2-427F-BE67-7C985EF08231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3448FF59-86D2-427F-BE67-7C985EF08231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3448FF59-86D2-427F-BE67-7C985EF08231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8835D9C-9280-4172-9CA2-28FCF2E8C267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8835D9C-9280-4172-9CA2-28FCF2E8C267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8835D9C-9280-4172-9CA2-28FCF2E8C267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8835D9C-9280-4172-9CA2-28FCF2E8C267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F029D71-7D4A-4BF6-A4A1-E9FF4D6EA795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F029D71-7D4A-4BF6-A4A1-E9FF4D6EA795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F029D71-7D4A-4BF6-A4A1-E9FF4D6EA795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F029D71-7D4A-4BF6-A4A1-E9FF4D6EA795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC1DD387-0B5C-4AAF-87E0-F551316A613E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC1DD387-0B5C-4AAF-87E0-F551316A613E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC1DD387-0B5C-4AAF-87E0-F551316A613E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC1DD387-0B5C-4AAF-87E0-F551316A613E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA97FE7D-B0F0-4EDA-B858-99EDC0034078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA97FE7D-B0F0-4EDA-B858-99EDC0034078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA97FE7D-B0F0-4EDA-B858-99EDC0034078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA97FE7D-B0F0-4EDA-B858-99EDC0034078}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
