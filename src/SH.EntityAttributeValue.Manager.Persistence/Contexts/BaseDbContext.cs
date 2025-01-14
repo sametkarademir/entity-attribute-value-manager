@@ -1,7 +1,5 @@
-using System.Data.Common;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Logging;
 using SH.EntityAttributeValue.Manager.Domain.Entities;
 using Attribute = SH.EntityAttributeValue.Manager.Domain.Entities.Attribute;
@@ -11,6 +9,7 @@ namespace SH.EntityAttributeValue.Manager.Persistence.Contexts;
 public class BaseDbContext : DbContext
 {
     public DbSet<Attribute> Attributes { get; set; }
+    public DbSet<AttributeOption> AttributeOptions { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<CategoryAttribute> CategoryAttributes { get; set; }
     public DbSet<Product> Products { get; set; }

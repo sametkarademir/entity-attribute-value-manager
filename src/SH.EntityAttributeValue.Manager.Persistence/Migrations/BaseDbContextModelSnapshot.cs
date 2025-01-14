@@ -31,6 +31,9 @@ namespace SH.EntityAttributeValue.Manager.Persistence.Migrations
                     b.Property<int>("DataType")
                         .HasColumnType("integer");
 
+                    b.Property<bool>("IsMultiple")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(256)
@@ -39,6 +42,27 @@ namespace SH.EntityAttributeValue.Manager.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AppAttributes", (string)null);
+                });
+
+            modelBuilder.Entity("SH.EntityAttributeValue.Manager.Domain.Entities.AttributeOption", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AttributeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AttributeId");
+
+                    b.ToTable("AppAttributeOptions", (string)null);
                 });
 
             modelBuilder.Entity("SH.EntityAttributeValue.Manager.Domain.Entities.Category", b =>
@@ -105,13 +129,27 @@ namespace SH.EntityAttributeValue.Manager.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<bool?>("AsBoolean")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("AsDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<decimal?>("AsDecimal")
+                        .HasColumnType("numeric");
+
+                    b.Property<int?>("AsInteger")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("AsString")
+                        .HasColumnType("text");
+
                     b.Property<Guid>("AttributeId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Content")
                         .IsRequired()
-                        .HasMaxLength(2000)
-                        .HasColumnType("character varying(2000)");
+                        .HasColumnType("text");
 
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uuid");
@@ -123,6 +161,17 @@ namespace SH.EntityAttributeValue.Manager.Persistence.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("AppValues", (string)null);
+                });
+
+            modelBuilder.Entity("SH.EntityAttributeValue.Manager.Domain.Entities.AttributeOption", b =>
+                {
+                    b.HasOne("SH.EntityAttributeValue.Manager.Domain.Entities.Attribute", "Attribute")
+                        .WithMany("AttributeOptions")
+                        .HasForeignKey("AttributeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Attribute");
                 });
 
             modelBuilder.Entity("SH.EntityAttributeValue.Manager.Domain.Entities.CategoryAttribute", b =>
@@ -176,6 +225,8 @@ namespace SH.EntityAttributeValue.Manager.Persistence.Migrations
 
             modelBuilder.Entity("SH.EntityAttributeValue.Manager.Domain.Entities.Attribute", b =>
                 {
+                    b.Navigation("AttributeOptions");
+
                     b.Navigation("CategoryAttributes");
                 });
 

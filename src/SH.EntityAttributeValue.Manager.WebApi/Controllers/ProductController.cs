@@ -40,10 +40,10 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
     
-    [HttpPost("test")]
-    public async Task<IActionResult> TestDynamicQueryAsync([FromBody] ProductDynamicFilterRequestDto request)
+    [HttpPost("eav")]
+    public async Task<IActionResult> EavFilterAsync([FromBody] ProductEavFilterRequestDto request)
     {
-        var result = await _productAppService.TestDynamicQueryAsync(request);
+        var result = await _productAppService.EavFilterAsync(request);
         
         return Ok(result);
     }

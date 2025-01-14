@@ -12,7 +12,12 @@ public class ValueConfiguration : IEntityTypeConfiguration<Value>
         builder.ToTable("AppValues");
         builder.HasKey(item => item.Id);
         
-        builder.Property(item => item.Content).HasMaxLength(2000).IsRequired();
+        builder.Property(item => item.Content).IsRequired();
+        builder.Property(item => item.AsString).IsRequired(false);
+        builder.Property(item => item.AsBoolean).IsRequired(false);
+        builder.Property(item => item.AsDate).IsRequired(false);
+        builder.Property(item => item.AsInteger).IsRequired(false);
+        builder.Property(item => item.AsDecimal).IsRequired(false);
         
         builder.HasOne<Product>(item => item.Product)
             .WithMany(item => item.Values)

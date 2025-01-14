@@ -7,5 +7,5 @@ namespace SH.EntityAttributeValue.Manager.Application.Repositories;
 
 public interface IProductRepository : IRepository<Product>
 {
-    Task<Paginate<Product>> TestDynamicQueryAsync(ProductDynamicFilterRequestDto request);
+    Task<Paginate<Product>> EavFilterAsync(ProductEavFilterRequestDto request);
 }

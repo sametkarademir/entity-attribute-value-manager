@@ -13,6 +13,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddPersistenceExtensions(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<IAttributeRepository, AttributeRepository>();
+        services.AddScoped<IAttributeOptionRepository, AttributeOptionRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<ICategoryAttributeRepository, CategoryAttributeRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();

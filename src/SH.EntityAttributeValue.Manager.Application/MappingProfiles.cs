@@ -1,4 +1,5 @@
 using AutoMapper;
+using SH.EntityAttributeValue.Manager.Application.Dtos.AttributeOptions;
 using SH.EntityAttributeValue.Manager.Application.Dtos.Attributes;
 using SH.EntityAttributeValue.Manager.Application.Dtos.Categories;
 using SH.EntityAttributeValue.Manager.Application.Dtos.CategoryAttributes;
@@ -18,6 +19,11 @@ public class MappingProfiles : Profile
         CreateMap<Attribute, AttributeResponseDto>().ReverseMap();
         CreateMap<Attribute, CreateAttributeRequestDto>().ReverseMap();
         CreateMap<Attribute, UpdateAttributeRequestDto>().ReverseMap();
+        
+        CreateMap<Paginate<AttributeOption>, PaginatedResponseDto<AttributeOptionResponseDto>>().ReverseMap();
+        CreateMap<AttributeOption, AttributeOptionResponseDto>().ReverseMap();
+        CreateMap<AttributeOption, CreateAttributeOptionRequestDto>().ReverseMap();
+        CreateMap<AttributeOption, UpdateAttributeOptionRequestDto>().ReverseMap();
         
         CreateMap<Paginate<Category>, PaginatedResponseDto<CategoryResponseDto>>().ReverseMap();
         CreateMap<Category, CategoryResponseDto>().ReverseMap();

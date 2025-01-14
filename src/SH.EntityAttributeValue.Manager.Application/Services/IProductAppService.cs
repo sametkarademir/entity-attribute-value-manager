@@ -9,7 +9,7 @@ public interface IProductAppService : IScopedService
     Task<ProductResponseDto> GetProductByIdAsync(Guid id);
     Task<PaginatedResponseDto<ProductResponseDto>> GetProductsPaginatedAsync(PaginatedRequestDto request);
     Task<PaginatedResponseDto<ProductResponseDto>> GetProductsPaginatedAndDynamicFilteredAsync(ProductPaginatedAndDynamicFilteredRequestDto request);
-    Task<PaginatedResponseDto<ProductResponseDto>> TestDynamicQueryAsync(ProductDynamicFilterRequestDto request);
+    Task<PaginatedResponseDto<ProductResponseDto>> EavFilterAsync(ProductEavFilterRequestDto request);
     Task<ProductResponseDto> CreateProductAsync(CreateProductRequestDto request);
     Task<ProductResponseDto> UpdateProductAsync(Guid id, UpdateProductRequestDto request);
     Task DeleteProductAsync(Guid id);
